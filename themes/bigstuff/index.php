@@ -13,10 +13,10 @@
     <?php endif; ?>
 </div><!-- end primary -->
 
-
-
-
-
+<div class="secondary about">
+<br/>
+<h2 class="test">&nbsp;&nbsp;&nbsp;&nbsp;The University of Cincinnati Fine Arts Collection has been amassed through purchases, loans, and donations since the University’s founding in 1819. There are over 4500 items, which include works by such famous Cincinnati artists as Dixie Selden, John Ellsworth Weis, John Rettig, Louis Charles Vogt, and Reginald Grooms. A portion of the collection has been digitized and cataloged.</h2>
+</div>
 
 <div id="secondary">
     <?php if (get_theme_option('Display Featured Item') == 1): ?>
@@ -57,4 +57,16 @@
     <?php fire_plugin_hook('public_home', array('view' => $this)); ?>
 
 </div><!-- end secondary -->
+
+<div class="test video">
+	<br/>
+	<h2>Campus Video</h2>
+	<iframe width="580" height="315" src="https://www.youtube.com/embed/ze-BghpFXDY" frameborder="0px" allowfullscreen></iframe>
+	<div>
+	<h4 >Into to the clg and the details about the site  bla abla abla bla ,.. 9 niyu myg Into to the clg and the details about the site  bla abla abla bla ,.. 9 niyu myg Into to the clg and the details about the site  bla abla abla bla ,.. 9 niyu myg</h4>
+	</div>
+	
+</div>
+
+
 <?php echo foot(); ?>
