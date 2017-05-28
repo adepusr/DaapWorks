@@ -13,14 +13,19 @@ else
     <div class="item-meta">
         <?php if (metadata($item, 'has thumbnail')): ?>
             <div class="item-img">
-                <?php echo link_to_item(item_image('square_thumbnail', array(), 0, $item), array(), 'show', $item); ?>
+                <?php  echo link_to_item(item_image('square_thumbnail', array(), 0, $item), array(), 'show', $item); ?>
             </div>
         <?php endif; ?>
-
+<div class="block_recent_items" style="padding-left:20px; 
+	padding-right:20px; 
+	padding-top:3%; 
+	padding-bottom:3px; 
+	background-color: #A0CFEC; 
+	margin:20px;">
         <?php if ($citation): ?>
-            <p class="item-citation">
-                <?php echo $citation; ?>
-            </p>
+            <h4>
+                <b><?php echo $citation; ?></b>
+            </h4>
         <?php endif; ?>
 
         <?php if ($description): ?>
@@ -28,7 +33,7 @@ else
                 <?php echo $description; ?>
             </p>
         <?php endif; ?>
-
+</div>
         <?php if (metadata($item, 'has tags')): ?>
     <p class="tags"><p><strong><?php echo __('Tags'); ?>:</strong>
         <?php echo tag_string($item); ?></p>

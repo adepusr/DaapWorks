@@ -1,5 +1,4 @@
 </div><!-- end content -->
-
 <footer role="contentinfo">
 
     <div id="footer-content" class="center-div">
@@ -12,12 +11,38 @@
         <p><?php echo $copyright; ?></p>
         <?php endif; ?>
         <nav><?php echo public_nav_main()->setMaxDepth(0); ?></nav>
+		
+		<div id="share-buttons">
+		
+<p><?php echo $_SERVER['REQUEST_URI']  ?></p>
+		</div>
+		
         <p><?php echo __('Proudly powered by <a href="http://omeka.org">Omeka</a>.'); ?></p>
 
     </div><!-- end footer-content -->
 
      <?php fire_plugin_hook('public_footer', array('view'=>$this)); ?>
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 </footer>
 
 <script type="text/javascript">

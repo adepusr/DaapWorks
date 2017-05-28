@@ -2,19 +2,29 @@
 <div id="primary">
     <h1><?php echo metadata('item', array('Dublin Core','Title')); ?></h1>
 
+	<!-- First Items metadata -->
+	
+	 <?php if (metadata('item', 'has files')): ?>
+		<div class="frontimg">
+				<?php echo item_image('original', array(), 0, $item); ?>
+			</div>
+     <?php endif; ?>
+	
+	
     <!-- Items metadata -->
-    <div id="item-metadata">
+    <span id="item-metadata">
         <?php echo all_element_texts('item'); ?>
-    </div>
-
+    </span>
+	
     <h3><?php echo __('Files'); ?></h3>
     <div id="item-images">
          <?php echo files_for_item(); ?>
     </div>
+	
 
    <?php if(metadata('item','Collection Name')): ?>
       <div id="collection" class="element">
-        <h3><?php echo __('Collection'); ?></h3>
+        <h3><?php echo __('Collection :'); ?></h3>
         <div class="element-text"><?php echo link_to_collection_for_item(); ?></div>
       </div>
    <?php endif; ?>
@@ -22,20 +32,20 @@
      <!-- The following prints a list of all tags associated with the item -->
     <?php if (metadata('item','has tags')): ?>
     <div id="item-tags" class="element">
-        <h3><?php echo __('Tags'); ?></h3>
+        <h3><?php echo __('Tags :'); ?></h3>
         <div class="element-text"><?php echo tag_string('item'); ?></div>
     </div>
     <?php endif;?>
 
     <!-- The following prints a global citation for this item.on the web site -->
     <div id="item-citation" class="element">
-        <h3><?php echo __('Reference'); ?></h3>
+        <h3><?php echo __('Reference :'); ?></h3>
         <div class="element-text"><?php echo make_citation($item); ?></div>
     </div>
 
     <!-- The following prints a citation for this item.on the web site -->
     <div id="item-citation" class="element">
-        <h3><?php echo __('Cite As'); ?></h3>
+        <h3><?php echo __('Cite As :'); ?></h3>
         <div class="element-text"><?php echo metadata('item','citation',array('no_escape'=>true)); ?></div>
     </div>
        <?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>

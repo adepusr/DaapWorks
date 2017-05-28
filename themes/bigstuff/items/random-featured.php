@@ -9,6 +9,7 @@
                 item_image('square_thumbnail', array(), 0, $item), 
                 array('class' => 'image'), 'show', $item
             );
+	
         }
         ?>
         <h3><?php echo link_to($item, 'show', strip_formatting($title)); ?></h3>

@@ -42,7 +42,6 @@ define('UPGRADE_DIR', APP_DIR . '/migrations');
 define('LANGUAGES_DIR', APP_DIR . '/languages');
 define('SCHEMA_DIR', APP_DIR . '/schema');
 define('SCRIPTS_DIR', APP_DIR . '/scripts');
-
 // Define the web address constants.
 
 // Set the scheme.
