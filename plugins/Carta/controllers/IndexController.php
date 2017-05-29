@@ -30,24 +30,15 @@ class Carta_IndexController extends Omeka_Controller_AbstractActionController
 	    $cartaDetail['zoom'] = $_POST['carta_zoom'];
 	    $cartaDetail['baselayer'] = $_POST['baselayer'];
 	    $cartaDetail['layergroup'] = $_POST['layer_group'];
-            $cartaDetail['layergroup'] = !empty($cartaDetail['layergroup'])  ? $cartaDetail['layergroup'] : 0;
 	    $cartaDetail['geo_image_olverlays'] = base64_encode(str_replace("\n", "<br>", str_replace("\r", "", $_POST['geo_image_olverlays'])));
 	    $cartaDetail['pointers'] = base64_encode(serialize($_POST['geo_json_str']));
 	    
 		$cartaDetail['show_sidebar'] = isset($_POST['show_sidebar']);
-		$cartaDetail['show_sidebar'] = !empty($cartaDetail['show_sidebar'])  ? $cartaDetail['show_sidebar'] : 0;
-                
-                $cartaDetail['show_measure'] = isset($_POST['show_measure']);
-		$cartaDetail['show_measure'] = !empty($cartaDetail['show_measure'])  ? $cartaDetail['show_measure'] : 0;
-                
-                $cartaDetail['show_minimap'] = isset($_POST['show_minimap']);
-                $cartaDetail['show_minimap'] = !empty($cartaDetail['show_minimap'])  ? $cartaDetail['show_minimap'] : 0;
-                
+		$cartaDetail['show_measure'] = isset($_POST['show_measure']);
+		$cartaDetail['show_minimap'] = isset($_POST['show_minimap']);
 		$cartaDetail['show_cluster'] = isset($_POST['show_cluster']);
-		 $cartaDetail['show_cluster'] = !empty($cartaDetail['show_cluster'])  ? $cartaDetail['show_cluster'] : 0;
-               
+		
 		$cartaDetail['show_legend'] = isset($_POST['show_legend']);
-                 $cartaDetail['show_legend'] = !empty($cartaDetail['show_legend'])  ? $cartaDetail['show_legend'] : 0;
 		$cartaDetail['legend_content'] = base64_encode($_POST['legend_content']);
 		
 		$cartaDetail['latitude'] = $_POST['latitude'];

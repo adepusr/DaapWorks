@@ -9,25 +9,20 @@ else
     $class = "item record"
 ?>
 <div class="<?php echo $class; ?>">
-    <h4><?php echo link_to_item($caption, array(), 'show', $item); ?></h4>
+    <h4><?php echo link_to_item($caption, array(), 'show', $item); ?></h4>			
     <div class="item-meta">
         <?php if (metadata($item, 'has thumbnail')): ?>
             <div class="item-img">
                 <?php  echo link_to_item(item_image('square_thumbnail', array(), 0, $item), array(), 'show', $item); ?>
             </div>
         <?php endif; ?>
-<div class="block_recent_items" style="padding-left:20px; 
-	padding-right:20px; 
-	padding-top:3%; 
-	padding-bottom:3px; 
-	background-color: #A0CFEC; 
-	margin:20px;">
+<div class="block_recent_items" >
         <?php if ($citation): ?>
             <h4>
                 <b><?php echo $citation; ?></b>
             </h4>
+		
         <?php endif; ?>
-
         <?php if ($description): ?>
             <p class="item-description">
                 <?php echo $description; ?>

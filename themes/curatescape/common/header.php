@@ -108,7 +108,11 @@ echo head_js(false); // <-- No to Omeka default scripts
 	</script>
 </header>
 
-
+<?php mh_map_actions();?>
+ <?php
+			 $reflFunc = new ReflectionFunction('mh_map_actions');
+			 print $reflFunc->getFileName() . ':' . $reflFunc->getStartLine();			 
+ ?> 
 <div id="wrap">
 
 	<figure id="hero">

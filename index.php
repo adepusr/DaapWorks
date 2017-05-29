@@ -20,4 +20,5 @@ $application->getBootstrap()->setOptions(array(
         )
     )
 ));
+
 $application->initialize()->run();

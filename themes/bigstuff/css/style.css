@@ -1349,6 +1349,7 @@ ul.title-list {
   clear: both;
   float: left;
   width: 100%;
+	padding: 3px;
 }
 
 .browse:not(:first-child) .item:not(.single-line) {
@@ -1465,13 +1466,13 @@ ul.title-list {
   overflow: auto;
   margin: 2.5ex 8em 1ex 2em;
 }
-
+/*
 .single-line::before {
   content: '•';
   padding-right: 2.5ex;
 	padding-left: 3.5ex;
 }
-
+*/
 .single-line:hover .item-meta {
   display: block;
 }
@@ -1901,21 +1902,40 @@ footer nav + p {
 #item-citation, #dublin-core-title, #dublin-core-subject, 
 #dublin-core-type, #dublin-core-format, #dublin-core-identifier, #dublin-core-language{
 	margin-bottom: -1.3em;
-	padding-left: 2%;
-	line-height: 7px;
-	
-	
+	padding-left: 2%;	
+	line-height: inherit;
 }
+
 #dublin-core-description{
-	line-height: auto;
 	font-weight: 500;
 	padding: 2%;
+	font-family: sans-serif;
+    color: black;
+    line-height: 22px;
+    padding-top: inherit;
+	padding-bottom: inherit;
 }
 .frontimg img
 {
 	max-height: 300px;
 	max-height: 300px;
 }
+
+.item h4 a{
+	margin: 0 auto;
+    padding: .9em;
+    background: #f2f2f2;
+    display: block;
+    font-weight: normal;
+    text-align: center;
+    color: #111;
+}
+
+
+
+
+
+
 
 
 

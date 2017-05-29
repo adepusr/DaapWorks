@@ -17,6 +17,12 @@ echo head(array('maptype'=>'focusarea','bodyid'=>'home','bodyclass'=>$classname)
 ?>
 
 <?php mh_map_actions();?>
+ <?php
+			 $reflFunc = new ReflectionFunction('mh_map_actions');
+			 print $reflFunc->getFileName() . ':' . $reflFunc->getStartLine();			 
+ ?> 
+			 
+
 	
 <div id="content" role="main">
 <article id="homepage">

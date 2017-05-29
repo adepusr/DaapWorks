@@ -14,8 +14,6 @@
 </div><!-- end primary -->
 
 
-
-
 <div id="secondary">
     <?php if (get_theme_option('Display Featured Item') == 1): ?>
         <!-- Featured Item -->

@@ -55,10 +55,10 @@
 
          <div id="primary-nav" role="navigation">
              <?php
-                  echo public_nav_main();
-             ?>
-         </div>
-  
+                  echo public_nav_main(); 
+             ?> 
+			 
+         </div>  
          <div id="mobile-nav" role="navigation" aria-label="<?php echo __('Mobile Navigation'); ?>">
              <?php
                   echo public_nav_main();
@@ -66,7 +66,6 @@
          </div>
         
         <?php echo theme_header_image(); ?>
-                       
     <div id="content" role="main" tabindex="-1">
 <div class="icons_share">
 	<?php $location = $_SERVER['REQUEST_URI']  ?>
@@ -80,5 +79,13 @@
 
 <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=<?php echo 'http://sitename.xyz'.$location ?>" target="_blank" class="fa"><img src="http://localhost/omeka-2.5/themes/bigstuff/images/linkedin.png"/></a><br/>
       </div>
+		
+		
+		
+		<?php if($_SERVER['REQUEST_URI'] == '/omeka-2.5/'){?>		
+<div id="geolocation-browse">
+    <?php echo $this->googleMap('map_browse', array('list' => 'map-links', 'params' => $params)); ?>
+</div>
+		<?php }?>
 		
 <?php fire_plugin_hook('public_content_top', array('view'=>$this)); ?>

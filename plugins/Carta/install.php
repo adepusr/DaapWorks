@@ -13,14 +13,14 @@
                   `zoom` tinyint(2) NOT NULL,
                   `baselayer` int(11) NOT NULL,
                   `layergroup` int(11) NOT NULL,
-                  `pointers` longtext ,
-				  `geo_image_olverlays` longtext,
+                  `pointers` longtext NOT NULL,
+				  `geo_image_olverlays` longtext NOT NULL,
 				  `show_measure` BOOLEAN NOT NULL DEFAULT TRUE,
 				  `show_minimap` BOOLEAN NOT NULL DEFAULT TRUE,
 				  `show_sidebar` BOOLEAN NOT NULL DEFAULT TRUE,
 				  `show_legend` BOOLEAN NOT NULL DEFAULT FALSE,
 				  `show_cluster` BOOLEAN NOT NULL DEFAULT FALSE,
-				  `legend_content` longtext ,
+				  `legend_content` longtext NOT NULL,
                   `latitude` varchar(100) NOT NULL DEFAULT '0',
                   `longitude` varchar(100) NOT NULL DEFAULT '0',
                   PRIMARY KEY (`id`)
@@ -43,10 +43,10 @@
             CREATE TABLE IF NOT EXISTS `$db->CartaLayer` (
               `id` int(11) NOT NULL AUTO_INCREMENT,
               `name` varchar(300) NOT NULL,
-              `url` varchar(300),
-              `key` varchar(300) ,
-              `accesstoken` varchar(300),
-              `attribution` varchar(300),
+              `url` varchar(300) NOT NULL,
+              `key` varchar(300) NOT NULL,
+              `accesstoken` varchar(300) NOT NULL,
+              `attribution` varchar(300) NOT NULL,
               PRIMARY KEY (`id`)
             ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1";
 
@@ -56,8 +56,8 @@
           $sql = "
             CREATE TABLE IF NOT EXISTS `$db->CartaItem` (
                  `id` int(11) NOT NULL AUTO_INCREMENT,
-                  `item_id` int(11),
-                  `content` longtext,
+                  `item_id` int(11) NOT NULL,
+                  `content` longtext NOT NULL,
                   PRIMARY KEY (`id`)
                 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1";
 
