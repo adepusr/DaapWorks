@@ -1,9 +1,14 @@
+
+![Carta Leaflet Plugin for Omeka](https://www.acugis.com/img/carta-banner.jpg)
+
 # Carta Omeka Plugin
 
 Leaflet Plugin for Omeka
 
 Stand alone plugin for adding Leaflet maps to your Omeka installation
-# Version 1.2.1
+# Version 1.2.2
+
+## Download latest version 2.1.1 from http://omeka.org/add-ons/plugins/carta/
 
 ## Description
 
@@ -33,6 +38,11 @@ Added basic image overlay
 
 Added opacity controls
 
+Added marker clustering
+
+Added fancy modal infoBox option
+
+
 ## Installation
 
 Copy the files to your Omeka plugins directory, <b>making sure that directory name is Carta</b>.  You can also download the current, stable zip file from us [here] (https://www.acugis.com/members/dl.php?type=d&id=16) as well. 
@@ -42,4 +52,10 @@ Activate the plugin from the Omeka plugins page
   - Please check here or at docs site for examples.
   
   - Please report any issues to **[hello(at)acugis(dot).com](mailto:hello@acugis.com)**.
+  
+  
+## Documentation
+
+Please see [Documentation](https://www.acugis.com/Carta) site.
+
  

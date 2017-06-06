@@ -14,4 +14,4 @@ if (!Bigstuff) {
             $("#mobile-nav .navigation").slideToggle();
         });
     };
-})(jQuery)
+})(jQuery);

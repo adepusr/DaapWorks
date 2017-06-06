@@ -62,7 +62,7 @@ div.map-notification {
         padding: 0 10px 10px 10px;
         -moz-box-sizing: border-box !important;
         box-sizing: border-box !important;
-        height: 436px;
+        height: 330px;
         width: 30%;
         float: left;
         overflow-y: auto;
@@ -79,8 +79,9 @@ div.map-notification {
     }
 
     #map_browse { 
-        float:left;
-        width:70%;
-        margin-bottom: 0 !important;
+        float:center;
+        width:99%;
+		box-shadow: 3px 10px 5px #888888;
+		border: #888888 5px solid;
     }
 }

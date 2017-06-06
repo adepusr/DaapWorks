@@ -1224,8 +1224,8 @@ header:after {
 
 #recent-items .item {
   overflow: hidden;
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 1.5em;
+	border-bottom: 2px solid #ccc;
+    margin-bottom: 0.7em;
 }
 #recent-items .item .image {
   height: 6em;
@@ -1348,8 +1348,8 @@ ul.title-list {
 .browse .item {
   clear: both;
   float: left;
-  width: 100%;
-	padding: 3px;
+  width: 98%;
+	padding: 2px;
 }
 
 .browse:not(:first-child) .item:not(.single-line) {
@@ -2309,4 +2309,28 @@ footer nav + p {
   }
 
   /* @end */
+}
+
+
+
+
+
+
+
+
+
+.file-display {
+    position: relative;
+    display: inline-block;
+}
+.metadata-data .element-set{
+    width: 300px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
 }

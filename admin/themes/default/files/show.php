@@ -15,7 +15,7 @@ echo flash();
 <section class="seven columns alpha">
     <?php echo file_markup($file); ?>
     
-    <?php echo all_element_texts('file'); ?>
+    <?php  echo all_element_texts('file'); ?>
     
     <?php fire_plugin_hook('admin_files_show', array('file' => $file, 'view' => $this)); ?>
 </section>

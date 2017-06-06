@@ -1,4 +1,8 @@
 <?php echo head(array('bodyid'=>'home', 'bodyclass' =>'two-col')); ?>
+<div id="geolocation-browse">
+    <?php echo $this->googleMap('map_browse', array('list' => 'map-links', 'params' => $params)); ?>
+	<div id="map-links"></div>
+</div>
 <div id="primary">
     <?php if ($item = get_random_hero_shot()): ?>
     <div id="hero-shot" class="hero-shot">

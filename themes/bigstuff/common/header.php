@@ -35,6 +35,10 @@
     <?php queue_js_file('vendor/jquery-accessibleMegaMenu'); ?>
     <?php queue_js_file('bigstuff'); ?>
     <?php queue_js_file('globals'); ?>
+	   <?php queue_js_file('test/bootstrap.min'); ?>  <?php queue_js_file('test/jquery.snippet.min'); ?>
+	<?php queue_js_file('test/jquery.easyPaginate'); ?>
+	<?php queue_js_file('test/bootstrap'); ?>
+	<?php queue_js_file('test/scripts'); ?>
     <?php echo head_js(); ?>
 </head>
  <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
@@ -83,9 +87,7 @@
 		
 		
 		<?php if($_SERVER['REQUEST_URI'] == '/omeka-2.5/'){?>		
-<div id="geolocation-browse">
-    <?php echo $this->googleMap('map_browse', array('list' => 'map-links', 'params' => $params)); ?>
-</div>
+
 		<?php }?>
 		
 <?php fire_plugin_hook('public_content_top', array('view'=>$this)); ?>
