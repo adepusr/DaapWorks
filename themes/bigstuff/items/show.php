@@ -1,29 +1,5 @@
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script>
-	
-	$("#edit").click(function(event){
-   event.preventDefault();
-   $('.inputDisabled').prop("disabled", false); // Element(s) are now enabled.
-});
-	
-$(document).ready(function(){
-    $(".file-display .metadata-data").css('visibility','hidden');
-    $(document).on({
-    mouseenter: function () {
-        $(".file-display .metadata-data").css('visibility','visible');
-        //stuff to do on mouse enter
-    },
-    mouseleave: function () {
-    $(".file-display .metadata-data").css('visibility','hidden');
-        //stuff to do on mouse leave
-    }
-}, ".file-display");
-});
-</script>
 
 
 
@@ -50,28 +26,30 @@ $(document).ready(function(){
 	set_loop_records('files', get_current_record('item')->Files); ?>
 	<div class='easyPaginate'>
 	<?php foreach(loop('files') as $file): ?>
-	<?php $val=all_element_texts(	$file,array('show_element_sets' =>array ('Dublin Core')));?>
-	
-		<div class="file-display pages" >
+	<?php $val = all_element_texts(	$file,array('show_element_sets' =>array ('Dublin Core')));
+		
+		?>
+		
+		<?php $a = "<div class='file-display' data-toggle='tooltip' data-placement='right' title='$val' data-html='true'>"; echo $a; ?>
 			<!-- Display the file itself-->
 			<?php echo file_markup(get_current_record('file')); ?>
 			<!-- Display the file's metadata -->
 			<div class="metadata-data">
-				<?php
-		echo all_element_texts(
-			$file,
-			array('show_element_sets' =>
-				array ('Dublin Core')));
-			?>
+				
 			</div>
 		</div>
+		
 		<!-- <div style="clear:both"></div> -->
 
 	<?php endforeach; ?>
 		
 		</div>
 		
-	
+	<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
 <!--     tyughij yuimo, byunimo,-->	
 	
 

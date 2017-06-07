@@ -19,7 +19,7 @@
     <?php fire_plugin_hook('public_head',array('view'=>$this)); ?>
     <!-- Stylesheets -->
     <?php
-    queue_css_url('http://fonts.googleapis.com/css?family=Playfair+Display:700,400|Playfair+Display+SC:400&subset=latin');
+    queue_css_url('https://fonts.googleapis.com/css?family=Playfair+Display:700,400|Playfair+Display+SC:400&subset=latin');
     queue_css_file(array('iconfonts', 'style'));
 
     echo head_css();
@@ -29,17 +29,16 @@
         echo '<style>body { background: url("' . $uri . '") repeat; }</style>';
     }
     ?>
+	
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- JavaScripts -->
     <?php queue_js_file('vendor/selectivizr', 'javascripts', array('conditional' => '(gte IE 6)&(lte IE 8)')); ?>
     <?php queue_js_file('vendor/respond'); ?>
     <?php queue_js_file('vendor/jquery-accessibleMegaMenu'); ?>
     <?php queue_js_file('bigstuff'); ?>
     <?php queue_js_file('globals'); ?>
-	   <?php queue_js_file('test/bootstrap.min'); ?>  <?php queue_js_file('test/jquery.snippet.min'); ?>
-	<?php queue_js_file('test/jquery.easyPaginate'); ?>
-	<?php queue_js_file('test/bootstrap'); ?>
-	<?php queue_js_file('test/scripts'); ?>
     <?php echo head_js(); ?>
+	
 </head>
  <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <a href="#content" id="skipnav"><?php echo __('Skip to main content'); ?></a>
