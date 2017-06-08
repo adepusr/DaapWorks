@@ -1,7 +1,6 @@
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://localhost/omeka-2.5/application/views/scripts/javascripts/abc.js"></script>
 
 <?php echo head(array('title' => metadata('item', array('Dublin Core', 'Title')),'bodyclass' => 'items show')); ?>
 <div id="primary">
@@ -20,38 +19,44 @@
     </span>	
 	
 	
-<!-- tessssssssssssssssssssssstttttttttttttt tttttttttttttttttttttttt   -->	
-
+<!-- tessssssssssssssssssssssstttttttttttttt tttttttttttttttttttttttt   -->
+	
+		<h3><?php echo 'Images' ?><br/></h3>
 <?php
 	set_loop_records('files', get_current_record('item')->Files); ?>
-	<div class='easyPaginate'>
+	<div id='easyPaginate'>
 	<?php foreach(loop('files') as $file): ?>
-	<?php $val = all_element_texts(	$file,array('show_element_sets' =>array ('Dublin Core')));
-		
-		?>
-		
-		<?php $a = "<div class='file-display' data-toggle='tooltip' data-placement='right' title='$val' data-html='true'>"; echo $a; ?>
+	<?php $val = all_element_texts(	$file,array('show_element_sets' =>array ('Dublin Core')));?>		
+		<div >
+		<?php $a = "<span  class='sample' data-toggle='tooltip' data-placement='right' title='$val' data-html='true'  >"; echo $a; ?>
 			<!-- Display the file itself-->
 			<?php echo file_markup(get_current_record('file')); ?>
-			<!-- Display the file's metadata -->
-			<div class="metadata-data">
-				
-			</div>
-		</div>
-		
+							
+	<?php echo '</span>' ?></div>
 		<!-- <div style="clear:both"></div> -->
-
-	<?php endforeach; ?>
-		
+	<?php endforeach; ?>		
 		</div>
-		
 	<script>
 $(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip();   
+	$('#easyPaginate').easyPaginate({
+		paginateElement: '.sample',
+		elementsPerPage: 9,
+	});
+		
 });
+		
+	setInterval(function() {
+		
+$('.sample').tooltip();
+		
+}, 500);
+
+		
 </script>
 <!--     tyughij yuimo, byunimo,-->	
-	
+
+
+
 
    <?php if(metadata('item','Collection Name')): ?>
       <div id="collection" class="element">
@@ -89,5 +94,7 @@ $(document).ready(function(){
     </ul>
 
 </div> <!-- End of Primary. -->
+
+
 
  <?php echo foot(); ?>

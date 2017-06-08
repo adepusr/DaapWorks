@@ -31,12 +31,17 @@
     ?>
 	
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!-- JavaScripts -->
+	
+	
+	<!-- JavaScripts -->
+	
+    
     <?php queue_js_file('vendor/selectivizr', 'javascripts', array('conditional' => '(gte IE 6)&(lte IE 8)')); ?>
     <?php queue_js_file('vendor/respond'); ?>
     <?php queue_js_file('vendor/jquery-accessibleMegaMenu'); ?>
     <?php queue_js_file('bigstuff'); ?>
     <?php queue_js_file('globals'); ?>
+	
     <?php echo head_js(); ?>
 	
 </head>
@@ -72,15 +77,15 @@
     <div id="content" role="main" tabindex="-1">
 <div class="icons_share">
 	<?php $location = $_SERVER['REQUEST_URI']  ?>
-<a href="http://www.facebook.com/sharer.php?u=<?php echo 'http://sitename.xyz'.$location ?>" target="_blank"  class="fa"><img src="http://localhost/omeka-2.5/themes/bigstuff/images/fb.png" style="border:0px;"/></a>
+<a href="http://www.facebook.com/sharer.php?u=<?php echo 'http://sitename.xyz'.$location ?>" target="_blank"  class="fa"><img src="https://localhost/omeka-2.5/themes/bigstuff/images/fb.png" style="border:0px;"/></a>
 <br/>
-<a href="https://twitter.com/share?url="<?php echo ' http://sitename.xyz'.$location ?> target="_blank" class="fa"><img src="http://localhost/omeka-2.5/themes/bigstuff/images/twitter.png" style="border:0px;"/></a><br/>
+<a href="https://twitter.com/share?url="<?php echo ' http://sitename.xyz'.$location ?> target="_blank" class="fa"><img src="https://localhost/omeka-2.5/themes/bigstuff/images/twitter.png" style="border:0px;"/></a><br/>
 
-<a href="https://plus.google.com/share?url=<?php echo 'http://sitename.xyz'.$location ?>" target="_blank" class="fa"><img src="http://localhost/omeka-2.5/themes/bigstuff/images/googleplus.png" style="border:0px;"/></a><br/>
+<a href="https://plus.google.com/share?url=<?php echo 'http://sitename.xyz'.$location ?>" target="_blank" class="fa"><img src="https://localhost/omeka-2.5/themes/bigstuff/images/googleplus.png" style="border:0px;"/></a><br/>
 
-<a href="mailto:?Subject=Simple Share Buttons&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20<?php echo ' http://sitename.xyz'.$location ?>"  target="_blank" class="fa"><img src="http://localhost/omeka-2.5/themes/bigstuff/images/gmail.png"/></a><br/>
+<a href="mailto:?Subject=Simple Share Buttons&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20<?php echo ' http://sitename.xyz'.$location ?>"  target="_blank" class="fa"><img src="https://localhost/omeka-2.5/themes/bigstuff/images/gmail.png"/></a><br/>
 
-<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=<?php echo 'http://sitename.xyz'.$location ?>" target="_blank" class="fa"><img src="http://localhost/omeka-2.5/themes/bigstuff/images/linkedin.png"/></a><br/>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=<?php echo 'http://sitename.xyz'.$location ?>" target="_blank" class="fa"><img src="https://localhost/omeka-2.5/themes/bigstuff/images/linkedin.png"/></a><br/>
       </div>
 		
 		

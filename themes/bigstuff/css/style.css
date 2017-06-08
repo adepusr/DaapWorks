@@ -2311,13 +2311,22 @@ footer nav + p {
   /* @end */
 }
 
+#easyPaginate
+{
+    text-align: -webkit-center;
+}
 
-
-
-
-
-
-
+.easyPaginateNav a {
+    background-color: #3f3a39;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+.easyPaginateNav{
+	text-align: -webkit-center;
+}
 
 .file-display {
     position: relative;
