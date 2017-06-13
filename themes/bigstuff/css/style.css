@@ -783,7 +783,7 @@ header:after {
   text-decoration: none;
 }
 .navigation li {
-  float: left;
+  float: center;
 }
 
 #admin-bar ul {
@@ -1127,11 +1127,14 @@ header:after {
     width: 420px;
   }
 }
-.test{
+.test{    
 	margin-left: 22px;
+    font-size: 25px;
+	padding-bottom: 2%;
+    font-stretch: ultra-condensed;
+    line-height: 40px;
 }
 .video{
-	width: 520px;
 }
 
 #home #secondary {
@@ -1225,7 +1228,7 @@ header:after {
 #recent-items .item {
   overflow: hidden;
 	border-bottom: 2px solid #ccc;
-    margin-bottom: 0.7em;
+    margin-bottom: 0.4em;
 }
 #recent-items .item .image {
   height: 6em;
@@ -1342,7 +1345,7 @@ ul.title-list {
 .element {
   overflow: hidden;
   clear: both;
-  margin-bottom: 1.5em;
+  margin-bottom: -0.9em;
 }
 
 .browse .item {
@@ -1464,9 +1467,10 @@ ul.title-list {
   display: none;
   position: relative;
   overflow: auto;
-  margin: 2.5ex 8em 1ex 2em;
+  /*margin: 2.5ex 8em 1ex 2em;*/
 }
 /*
+.single-line::before {
 .single-line::before {
   content: '•';
   padding-right: 2.5ex;
@@ -1486,6 +1490,7 @@ ul.title-list {
 .browse .item-meta {
   margin-bottom: 0;
   max-width: 100%;
+	padding: 1% 4%;
 }
 .browse .item-meta p:first-of-type {
   margin-top: 0;
@@ -1504,13 +1509,7 @@ ul.title-list {
 
 .browse .item-meta .item-img {
   float: left;
-  display: inline;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 220px;
-  margin-right: 0;
   float: right;
-  text-align: right;
 }
 @media only screen and (max-width: 767px) {
   .browse .item-meta .item-img {
@@ -1896,10 +1895,16 @@ footer nav + p {
 .fa {
   padding: 5px;
 }
-
+#primary{
+	
+    padding-left: 2%;
+    padding-right: 2%;
+    line-height: 25px;
+}
+/*
 #dublin-core-publisher, #dublin-core-source, #dublin-core-creator, #dublin-core-date,
 #dublin-core-contributor, #dublin-core-rights, #dublin-core-relation, #dublin-core-reference, 
-#item-citation, #dublin-core-title, #dublin-core-subject, 
+#item-citation, #dublin-core-title, #dublin-core-subject, #dublin-core-alternative-title, #dublin-core-spatial-coverage, 
 #dublin-core-type, #dublin-core-format, #dublin-core-identifier, #dublin-core-language{
 	margin-bottom: -1.3em;
 	padding-left: 2%;	
@@ -1914,6 +1919,10 @@ footer nav + p {
     line-height: 22px;
     padding-top: inherit;
 	padding-bottom: inherit;
+} 
+*/
+.tooltip{
+	height: 500px;
 }
 .frontimg img
 {
@@ -1930,7 +1939,6 @@ footer nav + p {
     text-align: center;
     color: #111;
 }
-
 
 
 

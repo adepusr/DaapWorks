@@ -18,10 +18,8 @@
         <?php echo all_element_texts('item'); ?>
     </span>	
 	
-	
-<!-- tessssssssssssssssssssssstttttttttttttt tttttttttttttttttttttttt   -->
-	
-		<h3><?php echo 'Images' ?><br/></h3>
+<!-- test   -->
+<h3><?php echo 'Images' ?><br/></h3>
 <?php
 	set_loop_records('files', get_current_record('item')->Files); ?>
 	<div id='easyPaginate'>
@@ -30,8 +28,7 @@
 		<div >
 		<?php $a = "<span  class='sample' data-toggle='tooltip' data-placement='right' title='$val' data-html='true'  >"; echo $a; ?>
 			<!-- Display the file itself-->
-			<?php echo file_markup(get_current_record('file')); ?>
-							
+			<?php echo file_markup(get_current_record('file')); ?>							
 	<?php echo '</span>' ?></div>
 		<!-- <div style="clear:both"></div> -->
 	<?php endforeach; ?>		
@@ -40,20 +37,13 @@
 $(document).ready(function(){
 	$('#easyPaginate').easyPaginate({
 		paginateElement: '.sample',
-		elementsPerPage: 9,
-	});
-		
-});
-		
-	setInterval(function() {
-		
-$('.sample').tooltip();
-		
+		elementsPerPage: 12,
+	});		
+});		
+	setInterval(function() {		
+$('.sample').tooltip();		
 }, 500);
-
-		
 </script>
-<!--     tyughij yuimo, byunimo,-->	
 
 
 

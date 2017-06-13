@@ -10,8 +10,6 @@ echo head(array('title' => $title, 'bodyclass' => 'map browse'));
     <?php echo $this->googleMap('map_browse'); ?>    
 </div> 
 
-
-
 <div id="primary">
     <?php if ($item = get_random_hero_shot()): ?>
     <div id="hero-shot" class="hero-shot">
@@ -68,7 +66,6 @@ echo head(array('title' => $title, 'bodyclass' => 'map browse'));
 </div><!-- end secondary -->
 
 <div class="test video">
-	<br/>
 	<h2>Campus Video</h2>
 	<iframe width="580" height="315" src="https://www.youtube.com/embed/ze-BghpFXDY" frameborder="0px" allowfullscreen></iframe>
 	<div>
