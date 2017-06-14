@@ -1921,9 +1921,6 @@ footer nav + p {
 	padding-bottom: inherit;
 } 
 */
-.tooltip{
-	height: 500px;
-}
 .frontimg img
 {
 	max-height: 300px;
