@@ -1,6 +1,6 @@
-/*
+
 document.writeln("<script type='text/javascript' src='https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js'></script>");
-*/
+
 
 function OmekaMap(mapDivId, center, options) {
     this.mapDivId = mapDivId;

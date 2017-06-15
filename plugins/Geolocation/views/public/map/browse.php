@@ -1,6 +1,9 @@
 <?php 
 queue_css_file('geolocation-items-map');
 
+
+
+
 $title = __('Home') ;
 echo head(array('title' => $title, 'bodyclass' => 'map browse'));
 ?>
@@ -45,6 +48,9 @@ echo head(array('title' => $title, 'bodyclass' => 'map browse'));
     <?php echo exhibit_builder_display_random_featured_exhibit(); ?>
     <?php endif; ?> 
 
+	
+		
+	
     <?php
     $recentItems = get_theme_option('Homepage Recent Items');
     if ($recentItems === null || $recentItems === ''):

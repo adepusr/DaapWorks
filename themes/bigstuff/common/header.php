@@ -89,7 +89,6 @@
       </div>
 		
 		
-		
 		<?php if($_SERVER['REQUEST_URI'] == '/omeka-2.5/'){?>		
 
 		<?php }?>
